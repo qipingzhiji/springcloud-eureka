@@ -1,0 +1,21 @@
+server:
+  port: 9092
+
+spring:
+  application:
+    name: eureka-provider-service
+  cloud:
+    discovery:
+      client:
+        health-indicator:
+          enabled: true
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:9091/eureka
+  instance:
+    prefer-ip-address: true
+
